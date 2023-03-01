@@ -1,3 +1,48 @@
-body {
-    background-color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .actions {
+        .login {
+            color: gitblue;
+        }
+        .login:hover {
+            @extend %hover
+        }
+    }
+}
+// variable
+
+// $gray: rgb (154, 148, 149);
+
+// default value
+// @mixin button ($style: solid, $border: red, $px, $py) {
+//     border: 1px solid $border;
+//     padding: ;
+// }
+
+
+
+// like i want to use something dynamic, whatever we create in mixin would be dynamic
+@mixin button ($border, $px, $py) {
+    border: 1px solid $border;
+    padding: $py $px;
+}
+
+// shared style
+%hover {
+    color: rgb (58, 55, 55);
+}
+
+
+
+// body {
+//     background-color: red;
+// }
